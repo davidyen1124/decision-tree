@@ -1,0 +1,28 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --reactflow-connection-path-stroke-width: 2;
+  }
+
+  body {
+    background-color: #f9fafb;
+    color: #111827;
+  }
+}
+
+@layer utilities {
+  .react-flow__edge-path {
+    stroke: #6b7280;
+  }
+
+  .react-flow__handle {
+    transition-property: color;
+    transition-duration: 200ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .react-flow__node.selected .react-flow__handle {
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+  }
+}
